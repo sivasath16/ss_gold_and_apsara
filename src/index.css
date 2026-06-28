@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Premium Rice Brand Color Palette */
+    --background: 35 50% 98%;
+    --foreground: 25 30% 15%;
+
+    --card: 35 40% 96%;
+    --card-foreground: 25 30% 15%;
+
+    --popover: 35 50% 98%;
+    --popover-foreground: 25 30% 15%;
+
+    /* Rich Gold - Primary Brand Color */
+    --primary: 42 60% 55%;
+    --primary-foreground: 35 50% 98%;
+
+    /* Warm Cream - Secondary */
+    --secondary: 35 30% 92%;
+    --secondary-foreground: 25 30% 20%;
+
+    /* Muted Earth Tones */
+    --muted: 35 20% 90%;
+    --muted-foreground: 25 15% 45%;
+
+    /* Deep Brown Accent */
+    --accent: 25 40% 25%;
+    --accent-foreground: 35 50% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 35 25% 88%;
+    --input: 35 25% 88%;
+    --ring: 42 60% 55%;
+
+    --radius: 0.5rem;
+
+    /* Custom Brand Colors */
+    --gold: 42 60% 55%;
+    --gold-light: 42 50% 75%;
+    --gold-dark: 42 70% 40%;
+    --cream: 35 50% 96%;
+    --earth: 25 40% 25%;
+    --earth-light: 25 30% 40%;
+    --grain: 35 35% 85%;
+    --warm-white: 35 60% 99%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(180deg, hsl(25 40% 15% / 0.5) 0%, hsl(25 40% 10% / 0.75) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(42 60% 55%) 0%, hsl(42 70% 45%) 100%);
+    --gradient-cream: linear-gradient(180deg, hsl(35 50% 98%) 0%, hsl(35 40% 94%) 100%);
+    --gradient-section: linear-gradient(180deg, hsl(35 50% 98%) 0%, hsl(35 35% 92%) 50%, hsl(35 50% 98%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(25 40% 25% / 0.1);
+    --shadow-card: 0 8px 30px -8px hsl(25 40% 25% / 0.12);
+    --shadow-gold: 0 8px 30px -8px hsl(42 60% 55% / 0.3);
+
+    /* Typography */
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'DM Sans', sans-serif;
+
+    /* Sidebar (keeping defaults) */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 25 30% 8%;
+    --foreground: 35 50% 96%;
+
+    --card: 25 30% 12%;
+    --card-foreground: 35 50% 96%;
+
+    --popover: 25 30% 10%;
+    --popover-foreground: 35 50% 96%;
+
+    --primary: 42 60% 55%;
+    --primary-foreground: 25 30% 8%;
+
+    --secondary: 25 25% 18%;
+    --secondary-foreground: 35 50% 96%;
+
+    --muted: 25 20% 20%;
+    --muted-foreground: 35 20% 65%;
+
+    --accent: 42 50% 65%;
+    --accent-foreground: 25 30% 8%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 25 25% 20%;
+    --input: 25 25% 20%;
+    --ring: 42 60% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-gold);
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-section {
+    background: var(--gradient-section);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+}
+
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+
+  .animation-delay-800 {
+    animation-delay: 800ms;
+  }
+}
